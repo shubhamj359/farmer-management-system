@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* FULL PAGE CENTER */
+.signup-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* CARD */
+.signup-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* TITLE */
+.signup-card h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* INPUT */
+.signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.signup-card input:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 5px rgba(39,174,96,0.4);
+}
+
+/* BUTTON */
+.signup-card button {
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-card button:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+/* LINK */
+.signup-card p {
+    margin-top: 15px;
+}
+
+.signup-card a {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="signup-container">
+
+<div class="signup-card">
+
+    <h2>🌱 Create Account</h2>
+
+    <form action="signup.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="text" name="village" placeholder="Village" required>
+
+        <button>Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+
+</div>
+
+</div>
+
+</body>
+</html>
